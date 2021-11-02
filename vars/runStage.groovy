@@ -1,4 +1,5 @@
 import com.wj.CiStage
+import com.wj.Util
 
 def call() {
 
@@ -9,6 +10,7 @@ def call() {
                    echo 'call myClosure ... ...'
                 '''
             }
+            echo Util.capitalize()
         }
     }
 
