@@ -14,7 +14,7 @@ class CiStage {
         capitalize()
     }
     @NonCPS
-    void capitalize(){
+    static void capitalize(){
         println(StringUtils.capitalize("abc"))
     }
 }
