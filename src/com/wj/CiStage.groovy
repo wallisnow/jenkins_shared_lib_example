@@ -4,8 +4,8 @@ class CiStage {
     String stageName
     Closure stageAction
 
-    runStage() {
-        print "start stage:" + stageName
+    void runStage() {
+        //print "start stage:" + stageName
         stageAction.run()
     }
 }
