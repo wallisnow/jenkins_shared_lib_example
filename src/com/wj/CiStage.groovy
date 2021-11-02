@@ -10,12 +10,8 @@ class CiStage {
 
     void runStage() {
         //print "start stage:" + stageName
-        stageAction.andThen {
-            def cat = capitalize()
-            echo cat
-        }
         stageAction.run()
-
+        echo capitalize()
     }
 
     static String capitalize() {
