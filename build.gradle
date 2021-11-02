@@ -1,6 +1,6 @@
 plugins {
     id 'groovy'
-    id 'java'
+    id "com.mkobit.jenkins.pipelines.shared-library" version "0.10.1"
 }
 
 group 'org.example'
@@ -10,12 +10,8 @@ repositories {
     mavenCentral()
 }
 
-sourceSets {
-    com {
-        groovy {
-            srcDir("src/com")
-        }
-    }
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
 }
 
 dependencies {
@@ -26,4 +22,13 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+sharedLibrary {
+    coreVersion = "2.86"
+    testHarnessVersion = "2.24"
+    pluginDependencies {
+        workflowCpsGlobalLibraryPluginVersion = "2.8"
+        dependency("io.jenkins.blueocean", "blueocean-web", "1.2.4")
+    }
 }
