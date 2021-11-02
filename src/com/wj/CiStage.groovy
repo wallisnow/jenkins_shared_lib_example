@@ -8,10 +8,13 @@ class CiStage {
     String stageName
     Closure stageAction
 
-    @NonCPS
     void runStage() {
         //print "start stage:" + stageName
         stageAction.run()
-        println(StringUtils.capitalize("cat"))
+        capitalize()
+    }
+    @NonCPS
+    void capitalize(){
+        println(StringUtils.capitalize("abc"))
     }
 }
