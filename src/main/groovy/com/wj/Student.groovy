@@ -1,10 +1,10 @@
 package com.wj
 
 class Student {
-    private String name
-    private String course
+    private static String name
+    private static String course
 
     static String showStudent() {
-        return "name: " + this.name + " has course: " + this.course
+        return "name: " + name + " has course: " + course
     }
 }
