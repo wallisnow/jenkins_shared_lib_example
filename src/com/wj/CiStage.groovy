@@ -9,9 +9,8 @@ class CiStage {
     Closure stageAction
 
     void runStage() {
-        //print "start stage:" + stageName
+        capitalize()
         stageAction.run()
-        echo capitalize()
     }
 
     static String capitalize() {
